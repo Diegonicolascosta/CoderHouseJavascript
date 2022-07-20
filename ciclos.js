@@ -3,18 +3,16 @@ let lastName = prompt("Ingrese su apellido", "apellido");
 let num1 = parseInt(prompt("dime tu numero", "numero"));
 let numOculto = 56;
 
-while (!isNaN(num1)) {
+while (!isNaN(num1) | ("ESC")) {
 
     if (num1 == numOculto){
-        alert(name+" "+lastName+" "+"adivinaste");
-
+        alert(name+" "+lastName+" "+"adivinaste");     
+        
     } else if (num1 < 56) {
         alert(name+" "+lastName+" "+"estas a " + (numOculto - num1) +" "+"del numero");
-    }else {
+    }else{
         alert(name+" "+lastName+" "+"estas a " + (num1 - numOculto) +" "+"del numero");
     } 
-            
-    num1 = parseInt(prompt("dime tu numero", "numero"));
-
+     
+    num1 = parseInt(prompt("Prueba de nuevo o escribe ESC", "numero o ESC"));
 }
-    
